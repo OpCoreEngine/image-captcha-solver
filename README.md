@@ -3,6 +3,8 @@ A captcha solver for an old mmorpg game.
 
 - Tesseract OCR must be installed in the project directory for the code to work.
 
+- The game's resolution was based on 800x600.
+
 - The reason for using the driver is to prevent the game from detecting mouse clicks. 
 You can check the following github repo for information about the virtual keyboard-mouse driver used.
 https://github.com/ddxoft/master
