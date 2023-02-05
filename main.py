@@ -13,7 +13,7 @@ import pytesseract as pt
 from ItemDB import items
 from threading import Thread
 
-pt.pytesseract.tesseract_cmd = '/Tesseract-OCR/tesseract'
+pt.pytesseract.tesseract_cmd = './Tesseract-OCR/tesseract'
 
 def detect_captcha(client):
     time.sleep(1)
@@ -71,11 +71,11 @@ def load_driver():
     global dd_dll
     driver_name = driver_option.get()
     if driver_name == 'Simple':
-        dd_dll = windll.LoadLibrary('DD94688.64.dll')
+        dd_dll = windll.LoadLibrary('./drivers/DD94687.64.dll')
     elif driver_name == 'Anıl':
-        dd_dll = windll.LoadLibrary('DD64.dll')
+        dd_dll = windll.LoadLibrary('./drivers/DD64.dll')
     elif driver_name == 'Kernel':
-        dd_dll = windll.LoadLibrary('DDHID64.dll')
+        dd_dll = windll.LoadLibrary('./drivers/DDHID64.dll')
     else:
         ctypes.windll.user32.MessageBoxW(0, "Driver Seçmeyi Unuttun", "HATA", 0)
         sys.exit()
