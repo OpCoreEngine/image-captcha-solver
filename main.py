@@ -72,9 +72,9 @@ def load_driver():
     driver_name = driver_option.get()
     if driver_name == 'Simple':
         dd_dll = windll.LoadLibrary('./drivers/DD94687.64.dll')
-    elif driver_name == 'Anıl':
+    elif driver_name == 'General':
         dd_dll = windll.LoadLibrary('./drivers/DD64.dll')
-    elif driver_name == 'Kernel':
+    elif driver_name == 'HID':
         dd_dll = windll.LoadLibrary('./drivers/DDHID64.dll')
     else:
         ctypes.windll.user32.MessageBoxW(0, "Driver Seçmeyi Unuttun", "HATA", 0)
@@ -83,7 +83,7 @@ def load_driver():
 
 
 client_amount_list = ["1", "2", "3", "4", "5", "6"]
-driver_list = ["Simple", "Anıl", "Kernel"]
+driver_list = ["Simple", "General", "HID"]
 client_names = []
 window_list = []
 
